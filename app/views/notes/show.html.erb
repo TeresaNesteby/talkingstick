@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @note.title %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @note.user_id %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @note.student_id %>
+</p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @note.class_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @note.description %>
+</p>
+
+<p>
+  <strong>Positive:</strong>
+  <%= @note.positive %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>
