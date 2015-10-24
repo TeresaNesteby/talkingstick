@@ -19,24 +19,32 @@
 <%= link_to 'Back', users_path %>
 <div class="col s12">
   Graphs
+  <%= javascript_include_tag "path/to/highcharts.js", "chartkick" %>
+  <%= line_chart @notes.map{|note|
+    {name: note.title, data: note.feats.group_by_week(:created_at).count}
+} %>
 </div>
 <div class="col s12">
   <div class="col s3">
     Class 1
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
   </div>
    <div class="col s3">
     Class 2
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
   </div>
    <div class="col s3">
     Class 3
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
   </div>
  <div class="col s3">
-    Add Class
+   Add Class
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
   </div>
 
 </div>
 <div class="col s6">
-   <table class="highlight center">
+   <table class="highlight center responsive-table">
         <thead>
           <tr>
               <th data-field="date">Date</th>
@@ -53,21 +61,21 @@
             <td>Eclair</td>
             <td>$0.87</td>
             <td>Eclair</td>
-            <td>$0.87</td>
+            <td>true</td>
           </tr>
           <tr>
             <td>Alan</td>
             <td>Jellybean</td>
             <td>$3.76</td>
             <td>Eclair</td>
-            <td>$0.87</td>
+            <td>false</td>
           </tr>
           <tr>
             <td>Jonathan</td>
             <td>Lollipop</td>
             <td>$7.00</td>
             <td>Eclair</td>
-            <td>$0.87</td>
+            <td>false</td>
           </tr>
         </tbody>
       </table>
