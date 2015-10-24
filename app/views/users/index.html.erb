@@ -1,33 +1,95 @@
-<p id="notice"><%= notice %></p>
 
-<h1>TalkingStick</h1>
+  <div id="index-banner" class="parallax-container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Fname</th>
-      <th>Lname</th>
-      <th>Email</th>
-      <th>Password digest</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <div class="login-container">
+        <br><br>
+        <!-- <h1 class="header center teal-text text-lighten-2">The place to stay organized and connect with others </h1> -->
+        <div class="row center">
+         <!--  <h5 class="header col s12 light">The place to organize information</h5> -->
+        </div>
+        <div class="container">
+    <div class="row">
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.fname %></td>
-        <td><%= user.lname %></td>
-        <td><%= user.email %></td>
-        <td><%= user.password_digest %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <div class="col m6">
+            <h2 class="center-align">TalkingStick</h2>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="pass" type="password" class="validate">
+                            <label for="pass">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <p>
+                                <input type="checkbox" id="remember">
+                                <label for="remember">Remember me</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="col m12">
+                            <p class="right-align">
+                                <button class="btn btn-large waves-effect waves-light" type="button" name="action">Login</button>
+                                <p><a href="new_user_student_path" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Signup Today!</a></p>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-<br>
+    </div>
+    <div class="parallax"><img src="http://i.huffpost.com/gen/1781960/images/o-TEACHERS-DESK-facebook.jpg" alt="Unsplashed background img 1"></div>
+  </div>
 
-<%= link_to 'New User', new_user_path %>
+
+  <div class="container">
+    <div class="section">
+
+
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../../dist/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
