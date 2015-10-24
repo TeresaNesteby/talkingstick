@@ -1,4 +1,14 @@
-<p id="notice"><%= notice %></p>
+ <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">TalkingStick</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Notes</a></li>
+        <li><a href="badges.html">Classes</a></li>
+        <li><a href="collapsible.html">Students</a></li>
+      </ul>
+    </div>
+  </nav>
+  <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Welcome, <%= @user.fname %> </strong>
@@ -7,3 +17,60 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+<div class="col s12">
+  Graphs
+</div>
+<div class="col s12">
+  <div class="col s3">
+    Class 1
+  </div>
+   <div class="col s3">
+    Class 2
+  </div>
+   <div class="col s3">
+    Class 3
+  </div>
+ <div class="col s3">
+    Add Class
+  </div>
+
+</div>
+<div class="col s6">
+   <table class="highlight center">
+        <thead>
+          <tr>
+              <th data-field="date">Date</th>
+              <th data-field="student_id">Student</th>
+              <th data-field="title">Title</th>
+              <th data-field="description">Description</th>
+              <th data-field="positive">Positive</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+
