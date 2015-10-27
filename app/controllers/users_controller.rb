@@ -35,7 +35,6 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
-     Analytics.identify(user_id: @user.id, traits: {email: @user.email, fname: @user.name })
   end
 
   # PATCH/PUT /users/1
@@ -50,7 +49,6 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
-     Analytics.identify(user_id: @user.id, traits: {email: @user.email, fname: @user.name })
   end
 
   # DELETE /users/1
