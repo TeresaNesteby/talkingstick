@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
