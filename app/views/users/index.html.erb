@@ -1,33 +1,141 @@
-<p id="notice"><%= notice %></p>
+ <div id="index-banner" class="parallax-container">
+    <div>
+      <%= image_tag "background1.jpg", :class => "parallax" %>
+    </div>
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">TalkingStick</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">The home to organize parent communication</h5>
+        </div>
+        <div class="row center">
+          <%= link_to 'Login', login_path, :class=> "btn-large waves-effect waves-light teal lighten-1" %>
+          <%= link_to 'Signup', new_user_path, :class => "btn-large waves-effect waves-light teal lighten-1" %>
+        </div>
+        <br><br>
+      </div>
+    </div>
+  </div>
 
-<h1>TalkingStick</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Fname</th>
-      <th>Lname</th>
-      <th>Email</th>
-      <th>Password digest</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="container">
+    <div class="section">
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.fname %></td>
-        <td><%= user.lname %></td>
-        <td><%= user.email %></td>
-        <td><%= user.password_digest %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Speeds up note-taking</h5>
 
-<br>
+            <p class="light">With TalkingStick's notes form you just input the information in the correct spots and the rest is done for you!</p>
+          </div>
+        </div>
 
-<%= link_to 'New User', new_user_path %>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+
+            <p class="light">By providing your notes in a chart form allowing you to quickly reference a specific note.  Graphs allow you to see recent communication </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with</h5>
+
+            <p class="light">Easily access previous notes to update when needed.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Sticks in a bundle cannot be broken</h5>
+        </div>
+      </div>
+    </div>
+    <div>
+    <%= image_tag "background2.jpg", :class => "parallax" %>
+  </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="star brown-text"></i></h3>
+          <h4>"It's the little conversations that build the relationships and make an impact on each student." -Robert John Meehan</h4>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div>
+      <%= image_tag "background3.jpg", :class => "parallax" %>
+    </div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Me</h5>
+          <p class="grey-text text-lighten-4">As a former educator, I am dedicated to creating tools to help create more efficient systems so teachers can focus on what really matters, our students.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../../dist/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
+
+

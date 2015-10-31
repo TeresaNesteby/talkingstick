@@ -13,7 +13,7 @@ def show
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to TalkingStick!"
       redirect_to @user
     else
       render 'new'
