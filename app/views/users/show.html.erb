@@ -1,24 +1,77 @@
-<p id="notice"><%= notice %></p>
+
+  <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>First name:</strong>
-  <%= @user.fname %>
+  <strong>Welcome, <%= @user.fname %> </strong>
 </p>
 
-<p>
-  <strong>Lname:</strong>
-  <%= @user.lname %>
-</p>
+<div class="col s12">
+  Graphs
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+</div>
+<div class="col s12">
+  <div class="col s3">
+    Class 1
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
+  </div>
+   <div class="col s3">
+    Class 2
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
+  </div>
+   <div class="col s3">
+    Class 3
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
+  </div>
+ <div class="col s3">
+   Add Class
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
+  </div>
+
+</div>
+<div class="col s6">
+   <table class="highlight center responsive-table">
+    <%= @user.notes %>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+        <thead>
+          <tr>
+              <th data-field="date">Date</th>
+              <th data-field="student_id">Student</th>
+              <th data-field="title">Title</th>
+              <th data-field="description">Description</th>
+              <th data-field="positive">Positive</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+            <td>Eclair</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+            <td>Eclair</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+            <td>Eclair</td>
+            <td>false</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+
