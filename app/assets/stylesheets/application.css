@@ -21,7 +21,7 @@
   span {
     margin-left: 20px;
     font-weight: normal;
-=======
+
 
 
 
@@ -8910,7 +8910,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   code[class*="language-"],
   pre[class*="language-"] {
     text-shadow: none;
->>>>>>> Stashed changes
+
   }
 }
 
