@@ -2162,7 +2162,7 @@ img.responsive-img, video.responsive-video {
   right: 0;
   bottom: 0;
   z-index: -1; }
-  .parallax image_tag {
+  .parallax image {
     display: none;
     position: absolute;
     left: 50%;
