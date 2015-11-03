@@ -40,10 +40,12 @@
   <% if @user.periods %>
     <% @user.periods.each do |period| %>
   <div class="col s3">
-    Period <%= period.period %>
+     <p> Period <%= period.period %>
 
-    <a class="btn-floating btn-large waves-effect waves-light indigo"><i class="material-icons">
+
+    <a class="btn-floating btn-large waves-effect waves-light indigo" ><%= link_to 'Show Period', user_period_path(@user, period) %><i class="material-icons">
     </i></a>
+</p>
   </div>
 
 <% end %>
@@ -98,7 +100,7 @@
 
   <input type= 'text' name = 'title' placeholder= 'title'>
   <input type= 'text' name = 'description' placeholder='description'>
-   <div class="switch">
+   <div class="switch" name="positive">
     <label>
       Positive
       <input type="checkbox">

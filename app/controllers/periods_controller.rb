@@ -10,7 +10,13 @@ class PeriodsController < ApplicationController
   # GET /periods/1
   # GET /periods/1.json
   def show
+    @user = User.find(params[:user_id])
+    @period = @user.periods.find(params[:id])
+    @students = Student.find_by(class_id: params[:id])
+    render :show
   end
+
+
 
   # GET /periods/new
   def new

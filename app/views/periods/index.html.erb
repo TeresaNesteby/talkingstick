@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Periods</h1>
+<div class='center'>
+<h3>Periods</h3>
 
 <table>
   <thead>
@@ -14,7 +14,8 @@
   <tbody>
     <% @periods.each do |period| %>
       <tr>
-        <td><%= period.name %></td>
+<%= link_to 'Show', user_period_path[@user.periods, @period] %> </td>
+        <td>
         <td><%= period.period %></td>
 
       </tr>
@@ -23,4 +24,4 @@
 </table>
 
 <br>
-
+</div>
