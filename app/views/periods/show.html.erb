@@ -7,13 +7,83 @@
 
 <p>
   <strong>Teacher:</strong>
-  <%= @period.teacher_id %>
+  <%= @period.user_id %>
 </p>
 
 <p>
   <strong>Period:</strong>
   <%= @period.period %>
 </p>
+
+  <thead>
+        <tr>
+            <th></th>
+            <th>Student</th>
+            <th>Title</th>
+            <th>Positive</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+<%= @user.students %>
+  <% if @user.students.class_id == params[:id]%>
+    <% @user.students.each do |student| %>
+    <tbody>
+        <tr>
+
+            <th><%= student.fname %></th>
+            <td><%= student.lname %></td>
+
+            <td><a href="/profiles/<%=@user.id%>/students/<%= student.id %>/edit" class= "editLink">Edit </a>
+            </td>
+            <td>
+                <form id="noteList" action="/profiles/<%=@user.id%>/students/<%= student.id %>" method="POST">
+                  <input type='hidden' name='_method' value='delete'>
+                  <input class="deleteNote" type="submit" value="delete">
+                </form>
+            </td>
+      </tr>
+    </tbody>
+  <%end %>
+<%end %>
+</table>
+
+<h5>Add your communication note below</h5>
+
+<form action = "/profiles/<%=@user.id%>/notes" method = 'post' action="create" class = 'add_note' id = <%= @user.id %>>
+  <input type= 'text' name = 'student' placeholder= 'student'>
+  <input type= 'date' name = 'date_of_meeting' placeholder= 'date'>
+
+  <input type= 'text' name = 'title' placeholder= 'title'>
+  <input type= 'text' name = 'description' placeholder='description'>
+   <div class="switch">
+    <label>
+      Positive
+      <input type="checkbox">
+      <span class="lever"></span>
+      Negative
+    </label>
+  </div>
+  <input type= 'submit' value='Add Note' class="btn-large waves-effect waves-light indigo">
+</form>
+
+<table :hidden>
+    <tbody class="note-template">
+        <tr class="pure-table-odd">
+            <th class='id'></th>
+            <td class='student'></td>
+            <td class='title'></td>
+            <td class='positive'></td>
+            <td><a href="" class= "note-edit">Edit </a></td>
+            <td>
+                <form action="" method="POST" class = "note-delete">
+                    <input type='hidden' name='_method' value='delete'>
+                    <input type="submit" value="delete">
+                </form>
+            </td>
+      </tr>
+    </tbody>
+</table>
 
 <%= link_to 'Edit', edit_period_path(@period) %> |
 <%= link_to 'Back', periods_path %>

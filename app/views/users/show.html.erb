@@ -1,34 +1,55 @@
 
   <p id="notice"><%= notice %></p>
 
-<p>
+<h5 class='center'>
   <strong>Welcome, <%= @user.fname %> </strong>
-</p>
+</h5>
+
+
+
+ <!--  <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+  </ul> -->
+
+
+
+
+
+
+
+
+
 
 <div class="col s12">
   Graphs
 
 </div>
 <div class="col s12">
+  <%= @user.periods %>
+  <% if @user.periods %>
+    <% @user.periods.each do |period| %>
   <div class="col s3">
-    Class 1
+    Period <%= period.period %>
 
-    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
-  </div>
-   <div class="col s3">
-    Class 2
-    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
-  </div>
-   <div class="col s3">
-    Class 3
-    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
-  </div>
- <div class="col s3">
-   Add Class
-    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">  </i></a>
+    <a class="btn-floating btn-large waves-effect waves-light indigo"><i class="material-icons">
+    </i></a>
   </div>
 
-</div>
+<% end %>
+<% end %>
+
+
 <div class="col s6">
    <table class="highlight center responsive-table">
     <%= @user.notes %>
@@ -77,9 +98,15 @@
 
   <input type= 'text' name = 'title' placeholder= 'title'>
   <input type= 'text' name = 'description' placeholder='description'>
-
-  <input type= 'boolean' name = 'positive' placeholder= 'Positive?'>
-  <input type= 'submit' value='Add Communication'>
+   <div class="switch">
+    <label>
+      Positive
+      <input type="checkbox">
+      <span class="lever"></span>
+      Negative
+    </label>
+  </div>
+  <input type= 'submit' value='Add Note' class="btn-large waves-effect waves-light indigo">
 </form>
 
 <table :hidden>
